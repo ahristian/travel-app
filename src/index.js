@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "./pages/style.css";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router";
-import { Traditions } from "./pages/Traditions";
-import { Profile } from "./ui/Profile";
+import { Traditions } from "./pages/Traditions"
 import { Food } from "./pages/Food";
 import { Destinations } from "./pages/Destinations";
 import { SinglePage } from './pages/SinglePage'
@@ -26,7 +25,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { ConfirmEmail } from './ui/ConfirmEmail'
 
 
 library.add(faLinkedin, faEnvelope,faKey, faDove, faUser, faSignOutAlt, faSignInAlt, faMapMarkerAlt, faMapMarkerAlt);
@@ -39,7 +37,6 @@ const Routing = (store) => (
     <NavigationBar/>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/profile/:profileId" component={Profile} profileId=":profileId"/>
         <Route exact path="/traditions" component={Traditions}/>
         <Route exact path="/foods" component={Food}/>
         <Route exact path="/destinations" component={Destinations}/>

@@ -4,42 +4,14 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchAuth } from '../../store/auth'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
-import { SignInForm } from './sign-in/SignInForm'
-import { SignUpForm } from './sign-up/SignUpForm'
-import { SignOutComponent } from './SignOut'
 import { Destinations } from '../../pages/Destinations'
 
 
 export const NavigationBar = (props) => {
-  const {profile} = props
-  const auth = useSelector(state => state.auth);
-  const dispatch = useDispatch()
-  const effects = () => {
-    dispatch(fetchAuth());
-  };
-  const inputs = [];
-  useEffect(effects, inputs);
-
-  const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false)
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const handleClose2 = () => setShow2(false);
-  const handleShow2 = () => setShow2(true);
-
   // isModalOpen prevents the sign in modal being removed from the dom before the
   // sign-in modal is closed by the user
-  const isModalOpen = ()=> {
-    if(!auth) {
-      return !auth
-    } else if(show === true && auth  ) {
-      return true
-    }
-  }
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
