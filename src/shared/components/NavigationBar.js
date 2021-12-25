@@ -19,10 +19,10 @@ export const NavigationBar = (props) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end pl-2 mr-5">
           <Nav >
-            <Nav.Link href="/home">Home</Nav.Link>
+            {/* <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/destinations">Destinations</Nav.Link>
             <Nav.Link href="/foods">Food</Nav.Link>
-            <Nav.Link href="/traditions">Traditions</Nav.Link>
+            <Nav.Link href="/traditions">Traditions</Nav.Link> */}
             {/* <NavDropdown id="basic-nav-dropdown" title="Sign Up/Log In" className="mr-3" >
               {auth !== null && (
                 <>
